@@ -1,0 +1,19 @@
+* Author: Mike Cardwell <pipe2imap@grepular.com> https://secure.grepular.com/
+
+Pipe2IMAP is a Perl script that will take IMAP options from the command line
+arguments, and an email from a PIPE, and will deliver the message via in IMAP
+APPEND operation. It relies on a single third party Perl module to be installed
+from CPAN named IMAP::Client.
+
+Example 1: Deliver an email to a users inbox:
+
+   cat email.txt|pipe2imap.pl --user username --pass password --folder "INBOX"
+
+Example 2: A more complicated example. You want to deliver an email to a folder
+in the account belonging to "user1". The folder is called "FolderForUser2" and
+"user2" has read only access to this folder. You want the folder to be created
+automatically if it doesn't exist. You want to mark the message as already seen.
+
+   cat email.txt|pipe2imap.pl --user user1 --pass password --folder "FolderForUser2" --create user2=lrs --flags '\seen'
+
+Run the application with no arguments to see a description of all of the options.
