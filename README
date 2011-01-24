@@ -1,4 +1,4 @@
-* Author: Mike Cardwell <pipe2imap@grepular.com> https://secure.grepular.com/
+* Author: Mike Cardwell <pipe2imap@grepular.com> https://grepular.com/
 
 Pipe2IMAP is a Perl script that will take IMAP options from the command line
 arguments, and an email from a PIPE, and will deliver the message via in IMAP
